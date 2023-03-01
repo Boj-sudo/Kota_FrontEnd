@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="9e936d20-580a-492f-a467-fa9266d820ca" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
+  <ClientOptions>
+    <GenerateAsynchronousMethods>false</GenerateAsynchronousMethods>
+    <GenerateTaskBasedAsynchronousMethod>true</GenerateTaskBasedAsynchronousMethod>
+    <EnableDataBinding>true</EnableDataBinding>
+    <ExcludedTypes />
+    <ImportXmlTypes>false</ImportXmlTypes>
+    <GenerateInternalTypes>false</GenerateInternalTypes>
+    <GenerateMessageContracts>false</GenerateMessageContracts>
+    <NamespaceMappings />
+    <CollectionMappings />
+    <GenerateSerializableTypes>true</GenerateSerializableTypes>
+    <Serializer>Auto</Serializer>
+    <UseSerializerForFaults>true</UseSerializerForFaults>
+    <ReferenceAllAssemblies>true</ReferenceAllAssemblies>
+    <ReferencedAssemblies />
+    <ReferencedDataContractTypes />
+    <ServiceContractMappings />
+  </ClientOptions>
+  <MetadataSources>
+    <MetadataSource Address="http://localhost:49683/BackEnd.svc" Protocol="http" SourceId="1" />
+  </MetadataSources>
+  <Metadata>
+    <MetadataFile FileName="BackEnd.xsd" MetadataType="Schema" ID="99432e33-0dd9-494a-ac2c-fa7574cb3878" SourceId="1" SourceUrl="http://localhost:49683/BackEnd.svc?xsd=xsd0" />
+    <MetadataFile FileName="BackEnd.wsdl" MetadataType="Wsdl" ID="e761a141-7655-4cd7-868c-488124576318" SourceId="1" SourceUrl="http://localhost:49683/BackEnd.svc?wsdl" />
+    <MetadataFile FileName="BackEnd1.xsd" MetadataType="Schema" ID="d6c66a3d-4084-4e71-8417-695284735464" SourceId="1" SourceUrl="http://localhost:49683/BackEnd.svc?xsd=xsd1" />
+    <MetadataFile FileName="BackEnd.disco" MetadataType="Disco" ID="53ec6d92-8f62-4daa-ac6f-51f8d05b26a9" SourceId="1" SourceUrl="http://localhost:49683/BackEnd.svc?disco" />
+    <MetadataFile FileName="BackEnd2.xsd" MetadataType="Schema" ID="add824ed-53de-47dc-a75e-61722c6f6731" SourceId="1" SourceUrl="http://localhost:49683/BackEnd.svc?xsd=xsd2" />
+  </Metadata>
+  <Extensions>
+    <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />
+    <ExtensionFile FileName="configuration.svcinfo" Name="configuration.svcinfo" />
+  </Extensions>
+</ReferenceGroup>

@@ -1,0 +1,400 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:wsap="http://schemas.xmlsoap.org/ws/2004/08/addressing/policy" xmlns:wsa10="http://www.w3.org/2005/08/addressing" xmlns:tns="http://tempuri.org/" xmlns:msc="http://schemas.microsoft.com/ws/2005/12/wsdl/contract" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:wsx="http://schemas.xmlsoap.org/ws/2004/09/mex" xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy" xmlns:wsam="http://www.w3.org/2007/05/addressing/metadata" xmlns:wsa="http://schemas.xmlsoap.org/ws/2004/08/addressing" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:wsaw="http://www.w3.org/2006/05/addressing/wsdl" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" xmlns:xsd="http://www.w3.org/2001/XMLSchema" name="BackEnd" targetNamespace="http://tempuri.org/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <xsd:schema targetNamespace="http://tempuri.org/Imports">
+      <xsd:import schemaLocation="http://localhost:49683/BackEnd.svc?xsd=xsd0" namespace="http://tempuri.org/" />
+      <xsd:import schemaLocation="http://localhost:49683/BackEnd.svc?xsd=xsd1" namespace="http://schemas.microsoft.com/2003/10/Serialization/" />
+      <xsd:import schemaLocation="http://localhost:49683/BackEnd.svc?xsd=xsd2" namespace="http://schemas.datacontract.org/2004/07/Kota_BackEnd" />
+    </xsd:schema>
+  </wsdl:types>
+  <wsdl:message name="IBackEnd_Register_InputMessage">
+    <wsdl:part name="parameters" element="tns:Register" />
+  </wsdl:message>
+  <wsdl:message name="IBackEnd_Register_OutputMessage">
+    <wsdl:part name="parameters" element="tns:RegisterResponse" />
+  </wsdl:message>
+  <wsdl:message name="IBackEnd_IsRegistered_InputMessage">
+    <wsdl:part name="parameters" element="tns:IsRegistered" />
+  </wsdl:message>
+  <wsdl:message name="IBackEnd_IsRegistered_OutputMessage">
+    <wsdl:part name="parameters" element="tns:IsRegisteredResponse" />
+  </wsdl:message>
+  <wsdl:message name="IBackEnd_Login_InputMessage">
+    <wsdl:part name="parameters" element="tns:Login" />
+  </wsdl:message>
+  <wsdl:message name="IBackEnd_Login_OutputMessage">
+    <wsdl:part name="parameters" element="tns:LoginResponse" />
+  </wsdl:message>
+  <wsdl:message name="IBackEnd_GetUser_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetUser" />
+  </wsdl:message>
+  <wsdl:message name="IBackEnd_GetUser_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetUserResponse" />
+  </wsdl:message>
+  <wsdl:message name="IBackEnd_GetUserToUpdate_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetUserToUpdate" />
+  </wsdl:message>
+  <wsdl:message name="IBackEnd_GetUserToUpdate_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetUserToUpdateResponse" />
+  </wsdl:message>
+  <wsdl:message name="IBackEnd_FindUser_InputMessage">
+    <wsdl:part name="parameters" element="tns:FindUser" />
+  </wsdl:message>
+  <wsdl:message name="IBackEnd_FindUser_OutputMessage">
+    <wsdl:part name="parameters" element="tns:FindUserResponse" />
+  </wsdl:message>
+  <wsdl:message name="IBackEnd_UpdateUser_InputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateUser" />
+  </wsdl:message>
+  <wsdl:message name="IBackEnd_UpdateUser_OutputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateUserResponse" />
+  </wsdl:message>
+  <wsdl:message name="IBackEnd_GetAllProducts_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetAllProducts" />
+  </wsdl:message>
+  <wsdl:message name="IBackEnd_GetAllProducts_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetAllProductsResponse" />
+  </wsdl:message>
+  <wsdl:message name="IBackEnd_GetAllKotaProducts_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetAllKotaProducts" />
+  </wsdl:message>
+  <wsdl:message name="IBackEnd_GetAllKotaProducts_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetAllKotaProductsResponse" />
+  </wsdl:message>
+  <wsdl:message name="IBackEnd_GetALlBunnyProducts_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetALlBunnyProducts" />
+  </wsdl:message>
+  <wsdl:message name="IBackEnd_GetALlBunnyProducts_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetALlBunnyProductsResponse" />
+  </wsdl:message>
+  <wsdl:message name="IBackEnd_GetProducts_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetProducts" />
+  </wsdl:message>
+  <wsdl:message name="IBackEnd_GetProducts_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetProductsResponse" />
+  </wsdl:message>
+  <wsdl:message name="IBackEnd_AddNewProduct_InputMessage">
+    <wsdl:part name="parameters" element="tns:AddNewProduct" />
+  </wsdl:message>
+  <wsdl:message name="IBackEnd_AddNewProduct_OutputMessage">
+    <wsdl:part name="parameters" element="tns:AddNewProductResponse" />
+  </wsdl:message>
+  <wsdl:message name="IBackEnd_DoesProductExist_InputMessage">
+    <wsdl:part name="parameters" element="tns:DoesProductExist" />
+  </wsdl:message>
+  <wsdl:message name="IBackEnd_DoesProductExist_OutputMessage">
+    <wsdl:part name="parameters" element="tns:DoesProductExistResponse" />
+  </wsdl:message>
+  <wsdl:message name="IBackEnd_GetProductID_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetProductID" />
+  </wsdl:message>
+  <wsdl:message name="IBackEnd_GetProductID_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetProductIDResponse" />
+  </wsdl:message>
+  <wsdl:message name="IBackEnd_GetProduct_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetProduct" />
+  </wsdl:message>
+  <wsdl:message name="IBackEnd_GetProduct_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetProductResponse" />
+  </wsdl:message>
+  <wsdl:message name="IBackEnd_RemoveProduct_InputMessage">
+    <wsdl:part name="parameters" element="tns:RemoveProduct" />
+  </wsdl:message>
+  <wsdl:message name="IBackEnd_RemoveProduct_OutputMessage">
+    <wsdl:part name="parameters" element="tns:RemoveProductResponse" />
+  </wsdl:message>
+  <wsdl:message name="IBackEnd_UpdateProducts_InputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateProducts" />
+  </wsdl:message>
+  <wsdl:message name="IBackEnd_UpdateProducts_OutputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateProductsResponse" />
+  </wsdl:message>
+  <wsdl:message name="IBackEnd_UpdateProductByID_InputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateProductByID" />
+  </wsdl:message>
+  <wsdl:message name="IBackEnd_UpdateProductByID_OutputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateProductByIDResponse" />
+  </wsdl:message>
+  <wsdl:message name="IBackEnd_GetOnSpecial_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetOnSpecial" />
+  </wsdl:message>
+  <wsdl:message name="IBackEnd_GetOnSpecial_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetOnSpecialResponse" />
+  </wsdl:message>
+  <wsdl:message name="IBackEnd_AboutProduct_InputMessage">
+    <wsdl:part name="parameters" element="tns:AboutProduct" />
+  </wsdl:message>
+  <wsdl:message name="IBackEnd_AboutProduct_OutputMessage">
+    <wsdl:part name="parameters" element="tns:AboutProductResponse" />
+  </wsdl:message>
+  <wsdl:portType name="IBackEnd">
+    <wsdl:operation name="Register">
+      <wsdl:input wsaw:Action="http://tempuri.org/IBackEnd/Register" message="tns:IBackEnd_Register_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IBackEnd/RegisterResponse" message="tns:IBackEnd_Register_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="IsRegistered">
+      <wsdl:input wsaw:Action="http://tempuri.org/IBackEnd/IsRegistered" message="tns:IBackEnd_IsRegistered_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IBackEnd/IsRegisteredResponse" message="tns:IBackEnd_IsRegistered_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="Login">
+      <wsdl:input wsaw:Action="http://tempuri.org/IBackEnd/Login" message="tns:IBackEnd_Login_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IBackEnd/LoginResponse" message="tns:IBackEnd_Login_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetUser">
+      <wsdl:input wsaw:Action="http://tempuri.org/IBackEnd/GetUser" message="tns:IBackEnd_GetUser_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IBackEnd/GetUserResponse" message="tns:IBackEnd_GetUser_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetUserToUpdate">
+      <wsdl:input wsaw:Action="http://tempuri.org/IBackEnd/GetUserToUpdate" message="tns:IBackEnd_GetUserToUpdate_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IBackEnd/GetUserToUpdateResponse" message="tns:IBackEnd_GetUserToUpdate_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="FindUser">
+      <wsdl:input wsaw:Action="http://tempuri.org/IBackEnd/FindUser" message="tns:IBackEnd_FindUser_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IBackEnd/FindUserResponse" message="tns:IBackEnd_FindUser_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="UpdateUser">
+      <wsdl:input wsaw:Action="http://tempuri.org/IBackEnd/UpdateUser" message="tns:IBackEnd_UpdateUser_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IBackEnd/UpdateUserResponse" message="tns:IBackEnd_UpdateUser_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetAllProducts">
+      <wsdl:input wsaw:Action="http://tempuri.org/IBackEnd/GetAllProducts" message="tns:IBackEnd_GetAllProducts_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IBackEnd/GetAllProductsResponse" message="tns:IBackEnd_GetAllProducts_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetAllKotaProducts">
+      <wsdl:input wsaw:Action="http://tempuri.org/IBackEnd/GetAllKotaProducts" message="tns:IBackEnd_GetAllKotaProducts_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IBackEnd/GetAllKotaProductsResponse" message="tns:IBackEnd_GetAllKotaProducts_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetALlBunnyProducts">
+      <wsdl:input wsaw:Action="http://tempuri.org/IBackEnd/GetALlBunnyProducts" message="tns:IBackEnd_GetALlBunnyProducts_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IBackEnd/GetALlBunnyProductsResponse" message="tns:IBackEnd_GetALlBunnyProducts_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetProducts">
+      <wsdl:input wsaw:Action="http://tempuri.org/IBackEnd/GetProducts" message="tns:IBackEnd_GetProducts_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IBackEnd/GetProductsResponse" message="tns:IBackEnd_GetProducts_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="AddNewProduct">
+      <wsdl:input wsaw:Action="http://tempuri.org/IBackEnd/AddNewProduct" message="tns:IBackEnd_AddNewProduct_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IBackEnd/AddNewProductResponse" message="tns:IBackEnd_AddNewProduct_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="DoesProductExist">
+      <wsdl:input wsaw:Action="http://tempuri.org/IBackEnd/DoesProductExist" message="tns:IBackEnd_DoesProductExist_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IBackEnd/DoesProductExistResponse" message="tns:IBackEnd_DoesProductExist_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetProductID">
+      <wsdl:input wsaw:Action="http://tempuri.org/IBackEnd/GetProductID" message="tns:IBackEnd_GetProductID_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IBackEnd/GetProductIDResponse" message="tns:IBackEnd_GetProductID_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetProduct">
+      <wsdl:input wsaw:Action="http://tempuri.org/IBackEnd/GetProduct" message="tns:IBackEnd_GetProduct_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IBackEnd/GetProductResponse" message="tns:IBackEnd_GetProduct_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="RemoveProduct">
+      <wsdl:input wsaw:Action="http://tempuri.org/IBackEnd/RemoveProduct" message="tns:IBackEnd_RemoveProduct_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IBackEnd/RemoveProductResponse" message="tns:IBackEnd_RemoveProduct_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="UpdateProducts">
+      <wsdl:input wsaw:Action="http://tempuri.org/IBackEnd/UpdateProducts" message="tns:IBackEnd_UpdateProducts_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IBackEnd/UpdateProductsResponse" message="tns:IBackEnd_UpdateProducts_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="UpdateProductByID">
+      <wsdl:input wsaw:Action="http://tempuri.org/IBackEnd/UpdateProductByID" message="tns:IBackEnd_UpdateProductByID_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IBackEnd/UpdateProductByIDResponse" message="tns:IBackEnd_UpdateProductByID_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetOnSpecial">
+      <wsdl:input wsaw:Action="http://tempuri.org/IBackEnd/GetOnSpecial" message="tns:IBackEnd_GetOnSpecial_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IBackEnd/GetOnSpecialResponse" message="tns:IBackEnd_GetOnSpecial_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="AboutProduct">
+      <wsdl:input wsaw:Action="http://tempuri.org/IBackEnd/AboutProduct" message="tns:IBackEnd_AboutProduct_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IBackEnd/AboutProductResponse" message="tns:IBackEnd_AboutProduct_OutputMessage" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="BasicHttpBinding_IBackEnd" type="tns:IBackEnd">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="Register">
+      <soap:operation soapAction="http://tempuri.org/IBackEnd/Register" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="IsRegistered">
+      <soap:operation soapAction="http://tempuri.org/IBackEnd/IsRegistered" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Login">
+      <soap:operation soapAction="http://tempuri.org/IBackEnd/Login" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetUser">
+      <soap:operation soapAction="http://tempuri.org/IBackEnd/GetUser" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetUserToUpdate">
+      <soap:operation soapAction="http://tempuri.org/IBackEnd/GetUserToUpdate" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="FindUser">
+      <soap:operation soapAction="http://tempuri.org/IBackEnd/FindUser" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UpdateUser">
+      <soap:operation soapAction="http://tempuri.org/IBackEnd/UpdateUser" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetAllProducts">
+      <soap:operation soapAction="http://tempuri.org/IBackEnd/GetAllProducts" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetAllKotaProducts">
+      <soap:operation soapAction="http://tempuri.org/IBackEnd/GetAllKotaProducts" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetALlBunnyProducts">
+      <soap:operation soapAction="http://tempuri.org/IBackEnd/GetALlBunnyProducts" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetProducts">
+      <soap:operation soapAction="http://tempuri.org/IBackEnd/GetProducts" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AddNewProduct">
+      <soap:operation soapAction="http://tempuri.org/IBackEnd/AddNewProduct" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DoesProductExist">
+      <soap:operation soapAction="http://tempuri.org/IBackEnd/DoesProductExist" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetProductID">
+      <soap:operation soapAction="http://tempuri.org/IBackEnd/GetProductID" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetProduct">
+      <soap:operation soapAction="http://tempuri.org/IBackEnd/GetProduct" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="RemoveProduct">
+      <soap:operation soapAction="http://tempuri.org/IBackEnd/RemoveProduct" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UpdateProducts">
+      <soap:operation soapAction="http://tempuri.org/IBackEnd/UpdateProducts" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UpdateProductByID">
+      <soap:operation soapAction="http://tempuri.org/IBackEnd/UpdateProductByID" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetOnSpecial">
+      <soap:operation soapAction="http://tempuri.org/IBackEnd/GetOnSpecial" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AboutProduct">
+      <soap:operation soapAction="http://tempuri.org/IBackEnd/AboutProduct" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="BackEnd">
+    <wsdl:port name="BasicHttpBinding_IBackEnd" binding="tns:BasicHttpBinding_IBackEnd">
+      <soap:address location="http://localhost:49683/BackEnd.svc" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>
